@@ -54,7 +54,7 @@ buku_disewa = [
 ]
 
 arsip_data_buku = []
-
+# Kumpulan Fungsi print data
 def print_data_kosong():
     print("\n\033[31mData tidak ditemukan.\033[0m")
 
@@ -85,7 +85,7 @@ def show_arsip_buku():
         return
     if arsip_data_buku:
         print(tabulate(arsip_data_buku, headers='keys', tablefmt='fancy_grid'))
-
+# Kumpulan fungsi input 
 def input_name(prompt):
     while True:
         name = input(prompt).strip().title()  # Mengambil input dan menghapus spasi di awal/akhir
@@ -123,7 +123,7 @@ def input_tahun_terbit():
         except ValueError:
             print("\033[31mInput tidak valid! Harap masukkan angka.\033[0m")
 
-# Fungsi untuk cek dan input ISBN dengan validasi
+# Fungsi untuk cek dan input dengan validasi
 def cek_isbn():
     while True:
         isbn = input("Masukkan ISBN dengan format 10-13 digit dan diawali angka 97: ")
