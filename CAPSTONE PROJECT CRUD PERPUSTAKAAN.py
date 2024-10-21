@@ -88,7 +88,7 @@ def show_arsip_buku():
 # Kumpulan fungsi input 
 def input_name(prompt):
     while True:
-        name = input(prompt).strip().title()  # Mengambil input dan menghapus spasi di awal/akhir
+        name = input(prompt).strip().title()  
         if is_valid_name(name):
             return name
         else:
@@ -148,7 +148,6 @@ def is_duplicate_ISBN(isbn):
     return False
 
 def is_valid_name(name):
-    # Mengecualikan karakter yang tidak diinginkan
     for char in name:
         if not (char.isalpha() or char in {'.', "'"} or char == ' '):
             return False
@@ -344,10 +343,10 @@ from tabulate import tabulate
 def delete_data():
     while True:
         print("\n=== DELETE DATA ===")
-        show_data()  # Fungsi untuk menampilkan daftar buku
+        show_data()  
 
         print("Silahkan masukkan nomor ISBN buku yang ingin dihapus.")
-        isbn = cek_isbn()  # Validasi input ISBN
+        isbn = cek_isbn()  
 
         for buku in data_buku:
             if buku["ISBN"] == isbn:
